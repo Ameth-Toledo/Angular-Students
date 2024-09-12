@@ -1,0 +1,28 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>
+              Card Alumnos
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content">
+            <div>Card Content Here</div>
+            <table>
+              @for (elementStudent of studentArray; track elementStudent) {
+                <tr>
+                  <td>
+                    {{elementStudent.id}}
+                  </td>
+                  <td>
+                    {{elementStudent.name}}
+                  </td>
+                  <td>
+                    <button mat-button (click)="deleteStudent(elementStudent.id)">Delete</button>
+                  </td>
+                </tr>
+              }
+            </table>
+          </mat-card-content>
+        </mat-card>
+</div>
